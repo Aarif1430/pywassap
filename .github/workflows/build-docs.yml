@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       debug_enabled:
-        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'
+        description: "Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)"
         required: false
         default: false
 jobs:
@@ -72,10 +72,10 @@ jobs:
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2.4
         with:
-          publish-dir: './site'
+          publish-dir: "./site"
           production-branch: main
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: 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
           enable-commit-comment: false
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_AUTH_TOKEN: 03993f87-09f9-410b-8c35-08ba6195f5f6
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
