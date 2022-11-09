@@ -50,9 +50,9 @@ jobs:
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: python -m poetry install
-      - name: Install Material for MkDocs Insiders
-        if: ( github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork == false ) && steps.cache.outputs.cache-hit != 'true'
-        run: python -m poetry run pip install git+https://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@github.com/squidfunk/mkdocs-material-insiders.git
+      # - name: Install Material for MkDocs Insiders
+      #   if: ( github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork == false ) && steps.cache.outputs.cache-hit != 'true'
+      #   run: python -m poetry run pip install git+https://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@github.com/squidfunk/mkdocs-material-insiders.git
       - uses: actions/cache@v2
         with:
           key: mkdocs-cards-${{ github.ref }}
@@ -60,9 +60,9 @@ jobs:
       - name: Build Docs
         if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.fork == true
         run: python -m poetry run mkdocs build
-      - name: Build Docs with Insiders
-        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork == false
-        run: python -m poetry run mkdocs build --config-file mkdocs.insiders.yml
+      # - name: Build Docs with Insiders
+      #   if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork == false
+      #   run: python -m poetry run mkdocs build --config-file mkdocs.insiders.yml
       - name: Zip docs
         run: python -m poetry run bash ./scripts/zip-docs.sh
       - uses: actions/upload-artifact@v3
