@@ -51,9 +51,6 @@ isort = "^5.9.3"
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry-version-plugin]
-source = "init"
-
 [tool.coverage.run]
 parallel = true
 source = [
