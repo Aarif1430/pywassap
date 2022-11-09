@@ -1,6 +1,6 @@
-<center>
+<p align="center">
 <img src="https://raw.githubusercontent.com/Aarif1430/pywassap/main/docs/img/logo-margin/pywassap-logo.jpeg?token=GHSAT0AAAAAABVQL4VZA6Y2HDBMR3XK763UY3K7GPA" alt="hiya">
-</center>
+</p>
 </p>
 <p align="center">
     <em> A Python FastAPI wrapper for WhatsApp Web API </em>
