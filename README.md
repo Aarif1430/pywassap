@@ -1,18 +1,18 @@
-<p align="center">
-  <a href="https://hiya.tiangolo.com"><img src="https://hiya.tiangolo.com/img/logo-margin/logo-margin-vector.svg" alt="hiya"></a>
+<center>
+<img src="https://raw.githubusercontent.com/Aarif1430/pywassap/main/docs/img/logo-margin/pywassap-logo.jpeg?token=GHSAT0AAAAAABVQL4VZA6Y2HDBMR3XK763UY3K7GPA" alt="hiya">
 </p>
 <p align="center">
-    <em>hiya, async and await, focused on developer experience.</em>
+    <em> A Python FastAPI wrapper for WhatsApp Web API </em>
 </p>
 <p align="center">
-<a href="https://github.com/tiangolo/hiya/actions?query=workflow%3ATest" target="_blank">
-    <img src="https://github.com/tiangolo/hiya/workflows/Test/badge.svg" alt="Test">
+<a href="https://github.com/Aarif1430/pywassap/actions/workflows/test.yml" target="_blank">
+    <img src="https://github.com/Aarif1430/pywassap/actions/workflows/test.yml/badge.svg" alt="Test">
 </a>
-<a href="https://github.com/tiangolo/hiya/actions?query=workflow%3APublish" target="_blank">
-    <img src="https://github.com/tiangolo/hiya/workflows/Publish/badge.svg" alt="Publish">
+<a href="https://github.com/Aarif1430/pywassap/actions/workflows/publish.yml" target="_blank">
+    <img src="https://github.com/Aarif1430/pywassap/actions/workflows/publish.yml/badge.svg" alt="Publish">
 </a>
-<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/tiangolo/hiya" target="_blank">
-    <img src="https://coverage-badge.samuelcolvin.workers.dev/tiangolo/hiya.svg" alt="Coverage">
+<a href="https://github.com/Aarif1430/pywassap/actions/workflows/smokeshow.yml" target="_blank">
+    <img src="https://github.com/Aarif1430/pywassap/actions/workflows/smokeshow.yml/badge.svg" alt="Coverage">
 <a href="https://pypi.org/project/hiya" target="_blank">
     <img src="https://img.shields.io/pypi/v/hiya?color=%2334D058&label=pypi%20package" alt="Package version">
 </a>
@@ -20,15 +20,24 @@
 
 ---
 
-**Documentation**: <a href="https://hiya.tiangolo.com" target="_blank">https://hiya.tiangolo.com</a>
+**Documentation**: <a href="https://pywassap.aarif1430.com" target="_blank">https://pywassap.aarif1430.com</a>
 
-**Source Code**: <a href="https://github.com/tiangolo/hiya" target="_blank">https://github.com/tiangolo/hiya</a>
+**Source Code**: <a href="https://github.com/aarif1430/pywassap" target="_blank">https://github.com/aarif1430/pywassap</a>
 
 ---
 
-**hiya** is a small library built on top of <a href="https://anyio.readthedocs.io/en/stable/" class="external-link" target="_blank">AnyIO</a>.
+**PyWassap** is a python library for sending WhatsApp messages using the WhatsApp Business API. It is a wrapper around the WhatsApp Business API. The library is built on top of the [FastAPI](https://fastapi.tiangolo.com/) framework and uses [pydantic](https://pydantic-docs.helpmanual.io/) for data validation. It is built with the developer experience in mind. It is a fully asynchronous library and uses [aiohttp](https://docs.aiohttp.org/en/stable/) for making HTTP requests.
 
-**hiya** has a small number of utility functions that allow working with `async`, `await`, and concurrent code in a more convenient way under my (<a href="https://twitter.com/tiangolo" class="external-link" target="_blank">@tiangolo - Sebastián Ramírez</a>) very opinionated and subjective point of view.
+**PyWassap** is a fully asynchronous library and uses [aiohttp](https://docs.aiohttp.org/en/stable/) for making HTTP requests. The library has different methods for sending messages to WhatsApp users. It also has methods for sending messages to WhatsApp groups. The methods include:
+
+    Sending text messages
+    Sending media messages
+    Sending template messages
+    Sending quick replies
+    Sending buttons
+    Sending location messages
+    Sending contact messages
+    Sending carousel messages etc.
 
 The main goal of **hiya** is to improve **developer experience** by providing better support for **autocompletion** and **inline errors** in the editor, and **more certainty** that the code is **bug-free** by providing better support for type checking tools like **mypy**.
 
