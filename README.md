@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/Aarif1430/pywassap/main/docs/img/logo-margin/pywassap-logo.jpeg?token=GHSAT0AAAAAABVQL4VZA6Y2HDBMR3XK763UY3K7GPA" alt="hiya">
+<img src="https://pywassap.netlify.app/img/logo-margin/pywassap-logo.jpeg" alt="hiya">
 </p>
 </p>
 <p align="center">
@@ -14,9 +14,6 @@
 </a>
 <a href="https://github.com/Aarif1430/pywassap/actions/workflows/smokeshow.yml" target="_blank">
     <img src="https://github.com/Aarif1430/pywassap/actions/workflows/smokeshow.yml/badge.svg" alt="Coverage">
-<a href="https://pypi.org/project/hiya" target="_blank">
-    <img src="https://img.shields.io/pypi/v/hiya?color=%2334D058&label=pypi%20package" alt="Package version">
-</a>
 </p>
 
 ---

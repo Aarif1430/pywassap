@@ -1,13 +1,8 @@
-from typing import Any, Callable, Dict, List, Union
+from unittest.mock import MagicMock
+
+import pytest
 
 
-def get_testing_print_function(
-    calls: List[List[Union[str, Dict[str, Any]]]]
-) -> Callable[..., Any]:
-    def new_print(*args):
-        data = []
-        for arg in args:
-            data.append(arg)
-        calls.append(data)
-
-    return new_print
+@pytest.fixture
+def whatsapp_mock():
+    return MagicMock()

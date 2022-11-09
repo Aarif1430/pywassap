@@ -1,19 +1,24 @@
-from os import getenv
+import asyncio
+from unittest.mock import MagicMock, patch
 
-from dotenv import load_dotenv
-from hiya import WhatsApp
+import pytest
+from src.hiya import WhatsApp
 
 
-def test_sending_message():
-    load_dotenv()
+@pytest.fixture
+def whatsapp_mock():
+    return MagicMock()
 
-    messenger = WhatsApp(token=getenv("TOKEN"), phone_number_id=getenv("PHONE_NUMBER_ID"))
 
-    response = messenger.send_message(
-        message="https://www.youtube.com/watch?v=K4TOrB7at0Y",
-        recipient_id=getenv("RECIPIENT_ID"),
-    )
+@patch("src.hiya._main.BaseWhatsApp._post")
+def test_sending_text_message(session_post, whatsapp_mock):
+    message = {"message": "Hello World", "recipient_id": "447469677603", "recipient_type": "individual"}
+    session_post.return_value = {
+        "contacts": [{"input": "447469677603", "wa_id": "447469677603"}],
+        "messaging_product": "whatsapp",
+    }
+    client = WhatsApp()
+    response = asyncio.run(client.send_text_message(**message))
 
-    assert response["contacts"][0]["input"] == getenv("RECIPIENT_ID")
-    assert response["contacts"][0]["wa_id"] == getenv("RECIPIENT_ID")
+    assert response["contacts"] == [{"input": "447469677603", "wa_id": "447469677603"}]
     assert response["messaging_product"] == "whatsapp"

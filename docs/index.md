@@ -1,28 +1,26 @@
 <p align="center">
-  <a href="https://asyncer.tiangolo.com"><img src="https://asyncer.tiangolo.com/img/logo-margin/logo-margin-vector.svg" alt="asyncer"></a>
+  <a href="https://pywassap.netlify.app"><img src="https://pywassap.netlify.app/img/logo-margin/pywassap-logo.jpeg" alt="pywassap"></a>
 </p>
 <p align="center">
-    <em>asyncer, async and await, focused on developer experience.</em>
+    <em> A simple FastAPI wrapper for WhatsApp Web API </em>
 </p>
 <p align="center">
-<a href="https://github.com/tiangolo/asyncer/actions?query=workflow%3ATest" target="_blank">
-    <img src="https://github.com/tiangolo/asyncer/workflows/Test/badge.svg" alt="Test">
+<a href="https://github.com/Aarif1430/pywassap/actions/workflows/test.yml" target="_blank">
+    <img src="https://github.com/Aarif1430/pywassap/actions/workflows/test.yml/badge.svg" alt="Test">
 </a>
-<a href="https://github.com/tiangolo/asyncer/actions?query=workflow%3APublish" target="_blank">
-    <img src="https://github.com/tiangolo/asyncer/workflows/Publish/badge.svg" alt="Publish">
+<a href="https://github.com/Aarif1430/pywassap/actions/workflows/publish.yml" target="_blank">
+    <img src="https://github.com/Aarif1430/pywassap/actions/workflows/publish.yml/badge.svg" alt="Publish">
 </a>
-<a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/tiangolo/asyncer" target="_blank">
-    <img src="https://coverage-badge.samuelcolvin.workers.dev/tiangolo/asyncer.svg" alt="Coverage">
-<a href="https://pypi.org/project/asyncer" target="_blank">
-    <img src="https://img.shields.io/pypi/v/asyncer?color=%2334D058&label=pypi%20package" alt="Package version">
-</a>
+<a href="https://github.com/Aarif1430/pywassap/actions/workflows/smokeshow.yml" target="_blank">
+    <img src="https://github.com/Aarif1430/pywassap/actions/workflows/smokeshow.yml/badge.svg" alt="Coverage">
+</p>
 </p>
 
 ---
 
-**Documentation**: <a href="https://asyncer.tiangolo.com" target="_blank">https://asyncer.tiangolo.com</a>
+**Documentation**: <a href="https://pywassap.netlify.app" target="_blank">https://pywassap.netlify.app</a>
 
-**Source Code**: <a href="https://github.com/tiangolo/asyncer" target="_blank">https://github.com/tiangolo/asyncer</a>
+**Source Code**: <a href="https://github.com/Aarif1430/pywassap" target="_blank">https://github.com/Aarif1430/pywassap</a>
 
 ---
 
