@@ -77,5 +77,5 @@ jobs:
           github-token: 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
           enable-commit-comment: false
         env:
-          NETLIFY_AUTH_TOKEN: 03993f87-09f9-410b-8c35-08ba6195f5f6
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: qstFzy6SDv3lq4HZoEYcxBKR40Cw7c3YMA7wi0IFGl4
+          NETLIFY_SITE_ID: 03993f87-09f9-410b-8c35-08ba6195f5f6
