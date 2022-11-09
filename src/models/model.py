@@ -11,15 +11,24 @@ class SendMessage(BaseModel):
 
     class Config:
         schema_extra = {
-            "example": {"message": "Hello World", "recipient_id": "5511999999999", "recipient_type": "individual"}
+            "example": {
+                "message": "Hello World",
+                "recipient_id": "5511999999999",
+                "recipient_type": "individual",
+            }
         }
 
 
 class SendMessageResponse(BaseModel):
     messaging_product: str = Field(..., example="whatsapp")
-    contacts: List[Dict[str, str]] = Field(..., example=[{"input": "447469677603", "wa_id": "447469677603"}])
+    contacts: List[Dict[str, str]] = Field(
+        ..., example=[{"input": "447469677603", "wa_id": "447469677603"}]
+    )
     messages: List[Dict[str, str]] = Field(
-        ..., example=[{"id": "wamid.HBgMNDQ3NDY5Njc3NjAzFQIAERgSNTA2MTA1QTg1NEYzQzQxREM4AA=="}]
+        ...,
+        example=[
+            {"id": "wamid.HBgMNDQ3NDY5Njc3NjAzFQIAERgSNTA2MTA1QTg1NEYzQzQxREM4AA=="}
+        ],
     )
 
     class Config:
@@ -27,7 +36,11 @@ class SendMessageResponse(BaseModel):
             "example": {
                 "messaging_product": "whatsapp",
                 "contacts": [{"input": "447469677603", "wa_id": "447469677603"}],
-                "messages": [{"id": "wamid.HBgMNDQ3NDY5Njc3NjAzFQIAERgSNTA2MTA1QTg1NEYzQzQxREM4AA=="}],
+                "messages": [
+                    {
+                        "id": "wamid.HBgMNDQ3NDY5Njc3NjAzFQIAERgSNTA2MTA1QTg1NEYzQzQxREM4AA=="
+                    }
+                ],
             }
         }
 
@@ -35,7 +48,9 @@ class SendMessageResponse(BaseModel):
 class ReplyToMessage(BaseModel):
     message: str = Field(..., example="Hello World")
     recipient_id: str = Field(..., example="5511999999999")
-    message_id: str = Field(..., example="wamid.HBgMNDQ3NDY5Njc3NjAzFQIAERgSNTA2MTA1QTg1NEYzQzQxREM4AA==")
+    message_id: str = Field(
+        ..., example="wamid.HBgMNDQ3NDY5Njc3NjAzFQIAERgSNTA2MTA1QTg1NEYzQzQxREM4AA=="
+    )
     recipient_type: str = Field(..., example="individual")
 
     class Config:

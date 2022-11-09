@@ -3,12 +3,12 @@ import logging
 import os
 from typing import Union
 
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import FastAPI
 from fastapi.openapi.docs import get_swagger_ui_html
 from mangum import Mangum
-from src.routers.router import router as whatsapp_router
 from starlette.responses import HTMLResponse
+
+from src.routers.router import router as whatsapp_router
 
 logger = logging.getLogger()
 

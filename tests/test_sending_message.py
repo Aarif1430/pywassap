@@ -2,6 +2,7 @@ import asyncio
 from unittest.mock import MagicMock, patch
 
 import pytest
+
 from src.hiya import WhatsApp
 
 
@@ -12,7 +13,11 @@ def whatsapp_mock():
 
 @patch("src.hiya._main.BaseWhatsApp._post")
 def test_sending_text_message(session_post, whatsapp_mock):
-    message = {"message": "Hello World", "recipient_id": "447469677603", "recipient_type": "individual"}
+    message = {
+        "message": "Hello World",
+        "recipient_id": "447469677603",
+        "recipient_type": "individual",
+    }
     session_post.return_value = {
         "contacts": [{"input": "447469677603", "wa_id": "447469677603"}],
         "messaging_product": "whatsapp",

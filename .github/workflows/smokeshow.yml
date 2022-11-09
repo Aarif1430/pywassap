@@ -11,13 +11,13 @@ permissions:
 
 jobs:
   smokeshow:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    # if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/setup-python@v4
         with:
-          python-version: "3.9"
+          python-version: "^3.10"
 
       - run: pip install smokeshow
 
@@ -31,6 +31,6 @@ jobs:
           SMOKESHOW_GITHUB_STATUS_DESCRIPTION: Coverage {coverage-percentage}
           SMOKESHOW_GITHUB_COVERAGE_THRESHOLD: 100
           SMOKESHOW_GITHUB_CONTEXT: coverage
-          SMOKESHOW_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SMOKESHOW_GITHUB_TOKEN: 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
           SMOKESHOW_GITHUB_PR_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
           SMOKESHOW_AUTH_KEY: EFMHxbQFwaGTRW5Bq4+Wgvqkqc/qOgDKOoR8O+Axq/Bd1GU/RNki4H9wfMS3ds/TLcA

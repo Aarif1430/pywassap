@@ -3,7 +3,7 @@
 set -e
 set -x
 
-mypy hiya
-flake8 hiya tests docs_src
-black hiya tests docs_src --check
-isort hiya tests docs_src scripts --check-only
+# mypy src
+flake8 src tests docs_src
+black src tests docs_src --check
+isort src tests docs_src scripts --check-only

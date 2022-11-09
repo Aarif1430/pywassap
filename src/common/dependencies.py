@@ -1,5 +1,6 @@
 """ system module for fastapi dependencies """
 from pydantic import BaseModel
+
 from src.hiya import WhatsApp
 
 whatsapp_base = WhatsApp()
