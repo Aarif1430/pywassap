@@ -2,7 +2,6 @@ import asyncio
 from unittest.mock import MagicMock, patch
 
 import pytest
-
 from src.hiya import WhatsApp
 
 
@@ -23,7 +22,8 @@ def test_sending_text_message(session_post, whatsapp_mock):
         "messaging_product": "whatsapp",
     }
     client = WhatsApp()
-    response = asyncio.run(client.send_text_message(**message))
+    loop = asyncio.get_event_loop()
+    response = loop.run_until_complete(client.send_text_message(**message))
 
     assert response["contacts"] == [{"input": "447469677603", "wa_id": "447469677603"}]
     assert response["messaging_product"] == "whatsapp"
