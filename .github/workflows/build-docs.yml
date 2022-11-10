@@ -74,8 +74,8 @@ jobs:
         with:
           publish-dir: "./site"
           production-branch: main
-          github-token: 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
+          github-token: ${{ secrets.GH_TOKEN }}
           enable-commit-comment: false
         env:
-          NETLIFY_AUTH_TOKEN: qstFzy6SDv3lq4HZoEYcxBKR40Cw7c3YMA7wi0IFGl4
-          NETLIFY_SITE_ID: 03993f87-09f9-410b-8c35-08ba6195f5f6
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

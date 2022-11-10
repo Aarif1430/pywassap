@@ -1,4 +1,3 @@
-# SMOKESHOW_AUTH_KEY='EFMHxbQFwaGTRW5Bq4+Wgvqkqc/qOgDKOoR8O+Axq/Bd1GU/RNki4H9wfMS3ds/TLcA'
 name: Smokeshow
 
 on:
@@ -32,8 +31,8 @@ jobs:
       - run: smokeshow upload coverage-html
         env:
           SMOKESHOW_GITHUB_STATUS_DESCRIPTION: Coverage {coverage-percentage}
-          SMOKESHOW_GITHUB_COVERAGE_THRESHOLD: 100
+          SMOKESHOW_GITHUB_COVERAGE_THRESHOLD: 80
           SMOKESHOW_GITHUB_CONTEXT: coverage
-          SMOKESHOW_GITHUB_TOKEN: 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
+          SMOKESHOW_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           SMOKESHOW_GITHUB_PR_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
-          SMOKESHOW_AUTH_KEY: EFMHxbQFwaGTRW5Bq4+Wgvqkqc/qOgDKOoR8O+Axq/Bd1GU/RNki4H9wfMS3ds/TLcA
+          SMOKESHOW_AUTH_KEY: ${{ secrets.SMOKESHOW_AUTH_KEY }}

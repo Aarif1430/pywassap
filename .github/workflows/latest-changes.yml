@@ -32,7 +32,7 @@ jobs:
           limit-access-to-actor: true
       - uses: docker://Aarif1/latest-changes:0.0.3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           latest_changes_file: docs/release-notes.md
           latest_changes_header: '## Latest Changes\n\n'
           debug_logs: true
