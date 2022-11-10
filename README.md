@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://pywassap.netlify.app/img/logo-margin/pywassap-logo.jpeg" alt="hiya">
+<img src="https://pywassap.netlify.app/img/logo-margin/pywassap-logo.png" alt="hiya">
 </p>
 </p>
 <p align="center">

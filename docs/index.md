@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://pywassap.netlify.app"><img src="https://pywassap.netlify.app/img/logo-margin/pywassap-logo.jpeg" alt="pywassap"></a>
+  <a href="https://pywassap.netlify.app"><img src="https://pywassap.netlify.app/img/logo-margin/pywassap-logo.png" alt="pywassap"></a>
 </p>
 <p align="center">
     <em> A simple FastAPI wrapper for WhatsApp Web API </em>
