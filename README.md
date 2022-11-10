@@ -8,9 +8,8 @@
 <a href="https://github.com/Aarif1430/pywassap/actions/workflows/test.yml" target="_blank">
     <img src="https://github.com/Aarif1430/pywassap/actions/workflows/test.yml/badge.svg" alt="Test">
 </a>
-<a href="https://github.com/Aarif1430/pywassap/actions/workflows/publish.yml" target="_blank">
-    <img src="https://github.com/Aarif1430/pywassap/actions/workflows/publish.yml/badge.svg" alt="Publish">
-</a>
+<a href="https://github.com/Aarif1430/pywassap/pulse" alt="Activity">
+    <img src="https://img.shields.io/github/commit-activity/m/Aarif1430/pywassap" /></a>
 <a href="https://github.com/Aarif1430/pywassap/actions/workflows/smokeshow.yml" target="_blank">
     <img src="https://github.com/Aarif1430/pywassap/actions/workflows/smokeshow.yml/badge.svg" alt="Coverage">
 </p>

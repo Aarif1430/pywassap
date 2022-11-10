@@ -37,5 +37,5 @@ jobs:
       - name: Comment Deploy
         uses: ./.github/actions/comment-docs-preview-in-pr
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           deploy_url: "${{ steps.netlify.outputs.deploy-url }}"
