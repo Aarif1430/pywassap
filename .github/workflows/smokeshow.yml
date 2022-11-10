@@ -8,6 +8,9 @@ on:
 
 permissions:
   statuses: write
+  id-token: write
+  contents: write
+  security-events: write
 
 jobs:
   smokeshow:
