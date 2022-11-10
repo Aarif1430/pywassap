@@ -11,6 +11,7 @@ def whatsapp_mock():
     return MagicMock()
 
 
+@patch("src.hiya._main.aiohttp.ClientSession")
 @patch("src.hiya._main.BaseWhatsApp._post")
 def test_reply_to_message(session_post, whatsapp_mock):
     message = {

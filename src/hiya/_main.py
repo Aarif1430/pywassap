@@ -25,7 +25,6 @@ class BaseWhatsApp:
 
     def __init__(self) -> None:
         self.url = f"{BASE_URL}/{PHONE_NUMBER}/messages"
-        self.loop = asyncio.get_event_loop()
         self.headers = {
             "Content-Type": "application/json",
             "Authorization": "Bearer {}".format(TOKEN),
