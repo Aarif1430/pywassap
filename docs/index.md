@@ -23,101 +23,61 @@
 **Source Code**: <a href="https://github.com/Aarif1430/pywassap" target="_blank">https://github.com/Aarif1430/pywassap</a>
 
 ---
+**PyWassap** is a python library for sending WhatsApp messages using the WhatsApp Business API. It is a wrapper around the WhatsApp Business API. The library is built on top of the [FastAPI](https://fastapi.Aarif1.com/) framework and uses [pydantic](https://pydantic-docs.helpmanual.io/) for data validation. It is built with the developer experience in mind. It is a fully asynchronous library and uses [aiohttp](https://docs.aiohttp.org/en/stable/) for making HTTP requests.
 
-**asyncer** is a small library built on top of <a href="https://anyio.readthedocs.io/en/stable/" class="external-link" target="_blank">AnyIO</a>.
+**PyWassap** supports the following features:
 
-**asyncer** has a small number of utility functions that allow working with `async`, `await`, and concurrent code in a more convenient way under my (<a href="https://twitter.com/tiangolo" class="external-link" target="_blank">@tiangolo - Sebastián Ramírez</a>) very opinionated and subjective point of view.
+**1. Send WhatsApp messages** - Send WhatsApp messages to a single or multiple recipients.
 
-The main goal of **asyncer** is to improve **developer experience** by providing better support for **autocompletion** and **inline errors** in the editor, and **more certainty** that the code is **bug-free** by providing better support for type checking tools like **mypy**.
+```Python
+from pywassap import WhatsApp
 
-**asyncer** also tries to improve **convenience** and simplicity when working with **async** code **mixed** with regular <abbr title="synchronous code, code that is not async">**blocking code**</abbr>, allowing to use them together in a simpler way... again, under my very **subjective** point of view.
+client = WhatsApp()
+client.send_message(
+    message="Hello World",
+    recipient_id="919999999999"
+    recipient_type="individual"
+)
+```
 
-## 🚨 Warning
+The entire **PyWassap** library is built on top of the FastApI framework.
+The FastAPI swagger UI is available at `http://localhost:8000/docs` and
+makes it easy to test the API.
 
-This small library only exists to be able to use these **utility functions** until (and if) they are integrated into **AnyIO**.
+**2. Send WhatsApp messages to multiple recipients** - Send WhatsApp messages to multiple recipients.
 
-It will probably take some time for that to happen (or to be decided if it will be included or not).
+```Python
+from pywassap import WhatsApp
 
-So I made this to be able to use these ideas right now. 🤓
+client = WhatsApp()
+client.send_message(
+    message="Hello World",
+    recipient_id=["919999999999", "919999999998"]
+    recipient_type="individual"
+)
+```
 
-## Can I Use It?
-
-Yes 🎉 (but continue reading).
-
-You can use this and evaluate the **library API design** I'm proposing. It will probably be useful to know if it works and is useful for you (I hope so).
-
-But still, consider this lab material, expect it to change a bit. 🧪
-
-If you use it, **pin the exact asyncer version** for your project, to make sure it all works.
-
-Have **tests** for your project (as you should, anyway). And **upgrade the version** once you know that the new version continues to work correctly.
-
-Still, it's **just 4 functions**, so there's not much to change, if you had to refactor your code to update something it would not be much.
-
-And if you don't want to add `asyncer` as a dependency to your project, you can also just copy the main file and try out those functions, it's quite small (but in that case you won't get updates easily).
 
 ## Requirements
-
-As **asyncer** is based on **AnyIO** it will be also installed automatically when you install **asyncer**.
+For development, the following requirements are needed:
+```console
+fastapi
+uvicorn
+pydantic
+aiohttp
+```
 
 ## Installation
 
 <div class="termy">
 
 ```console
-$ pip install asyncer
+$ pip install pywassap
 ---> 100%
 Successfully installed asyncer anyio
 ```
 
 </div>
-
-## How to Use
-
-You can read more about each of the use cases and utility functions in **asyncer** in the <a href="https://asyncer.tiangolo.com/tutorial/" class="external-link" target="_blank">tutorial</a>.
-
-As a sneak preview of one of the utilities, you can **call sync code from async code** using `asyncify()`:
-
-```Python
-import time
-
-import anyio
-from asyncer import asyncify
-
-
-def do_sync_work(name: str):
-    time.sleep(1)
-    return f"Hello, {name}"
-
-
-async def main():
-    message = await asyncify(do_sync_work)(name="World")
-    print(message)
-
-
-anyio.run(main)
-```
-
-**asyncer**'s `asyncify()` will use AnyIO underneath to do _the smart thing_, avoid blocking the main **async** event loop, and run the **sync**/blocking function in a **worker thread**.
-
-### Editor Support
-
-Everything in **asyncer** is designed to get the best **developer experience** possible, with the best editor support.
-
-- **Autocompletion** for function arguments:
-
-<img class="shadow" src="https://asyncer.tiangolo.com/img/tutorial/asyncify/image01.png">
-
-- **Autocompletion** for return values:
-
-<img class="shadow" src="https://asyncer.tiangolo.com/img/tutorial/asyncify/image02.png">
-
-- **Inline errors** in editor:
-
-<img class="shadow" src="https://asyncer.tiangolo.com/img/tutorial/soonify/image02.png">
-
-- Support for tools like **mypy**, that can help you verify that your **code is correct**, and prevent many bugs.
-
 ## License
 
-This project is licensed under the terms of the [MIT license](https://github.com/tiangolo/asyncer/blob/main/LICENSE).
+This project is licensed under the terms of the [MIT license](https://github.com/Aarif1430/pywassap/blob/main/LICENSE).

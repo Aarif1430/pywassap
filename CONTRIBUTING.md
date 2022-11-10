@@ -1,1 +1,1 @@
-Please read the [Development - Contributing](https://hiya.tiangolo.com/contributing/) guidelines in the documentation site.
+Please read the [Development - Contributing](https://pywassap.netlify.app/contiributing/) guidelines in the documentation site.

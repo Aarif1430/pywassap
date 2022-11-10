@@ -5,13 +5,13 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: brown
+      primary: gold
       accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - scheme: slate
-      primary: brown
+      primary: gold
       accent: indigo
       toggle:
         icon: material/toggle-switch
@@ -30,16 +30,9 @@ repo_url: https://github.com/Aarif1430/pywassap
 edit_uri: ""
 nav:
   - hiya: index.md
-  # - Tutorial - User Guide:
-  #     - tutorial/index.md
-  #     - tutorial/first-steps.md
-  #     - tutorial/runnify.md
-  #     - tutorial/soonify.md
-  #     - tutorial/soonify-return.md
-  #     - tutorial/asyncify.md
-  #     - tutorial/syncify.md
-  #     - tutorial/syncify-no-raise.md
-  # - help.md
+  - Features - User Guide:
+      - sections/index.md
+  - help.md
   - release-notes.md
 markdown_extensions:
   - toc:

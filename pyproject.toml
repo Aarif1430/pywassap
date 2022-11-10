@@ -1,12 +1,12 @@
 [tool.poetry]
-name = "hiya"
+name = "PyWassap"
 version = "0"
-description = "hiya, async and await, focused on developer experience."
-authors = ["Sebastián Ramírez <tiangolo@gmail.com>"]
+description = "A simple FastAPI wrapper for WhatsApp Web API"
+authors = ["Aarif Malik <malikarif13@gmail.com>"]
 readme = "README.md"
-homepage = "https://github.com/tiangolo/hiya"
-documentation = "https://hiya.tiangolo.com"
-repository = "https://github.com/tiangolo/hiya"
+homepage = "https://github.com/Aarif1430/pywassap"
+documentation = "https://pywassap.netlify.app/"
+repository = "https://github.com/Aarif1430/pywassap"
 license = "MIT"
 classifiers = [
     "Development Status :: 4 - Beta",
