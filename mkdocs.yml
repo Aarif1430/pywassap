@@ -1,20 +1,20 @@
-site_name: hiya
-site_description: hiya, async and await, focused on developer experience.
-site_url: https://hiya.tiangolo.com/
+site_name: pywassap
+site_description: A simple FastAPI wrapper for WhatsApp Web API.
+site_url: https://pywassap.netlify.app/
 theme:
   name: material
   palette:
     - scheme: default
-      primary: orange
+      primary: brown
       accent: indigo
       toggle:
-        icon: material/lightbulb
+        icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - scheme: slate
-      primary: orange
+      primary: brown
       accent: indigo
       toggle:
-        icon: material/lightbulb-outline
+        icon: material/toggle-switch
         name: Switch to light mode
   features:
     - search.suggest
@@ -25,8 +25,8 @@ theme:
   logo: img/icon-white.svg
   favicon: img/favicon.png
   language: en
-repo_name: tiangolo/hiya
-repo_url: https://github.com/tiangolo/hiya
+repo_name: Aarif1430/pywassap
+repo_url: https://github.com/Aarif1430/pywassap
 edit_uri: ""
 nav:
   - hiya: index.md
