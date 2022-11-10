@@ -74,10 +74,11 @@ aiohttp
 ```console
 $ pip install pywassap
 ---> 100%
-Successfully installed asyncer anyio
+Successfully installed pywassap
 ```
 
 </div>
+
 ## License
 
 This project is licensed under the terms of the [MIT license](https://github.com/Aarif1430/pywassap/blob/main/LICENSE).

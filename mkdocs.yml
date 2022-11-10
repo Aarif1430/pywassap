@@ -5,13 +5,13 @@ theme:
   name: material
   palette:
     - scheme: default
-      primary: dark-green
+      primary: green
       accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - scheme: slate
-      primary: dark-green
+      primary: green
       accent: indigo
       toggle:
         icon: material/toggle-switch
@@ -29,7 +29,7 @@ repo_name: Aarif1430/pywassap
 repo_url: https://github.com/Aarif1430/pywassap
 edit_uri: ""
 nav:
-  - PyWassap: index.md
+  - Home: index.md
   - Features - User Guide:
       - sections/index.md
 markdown_extensions:
