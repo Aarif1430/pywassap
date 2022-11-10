@@ -30,16 +30,16 @@ repo_url: https://github.com/Aarif1430/pywassap
 edit_uri: ""
 nav:
   - hiya: index.md
-  - Tutorial - User Guide:
-      - tutorial/index.md
-      - tutorial/first-steps.md
-      - tutorial/runnify.md
-      - tutorial/soonify.md
-      - tutorial/soonify-return.md
-      - tutorial/asyncify.md
-      - tutorial/syncify.md
-      - tutorial/syncify-no-raise.md
-  - help.md
+  # - Tutorial - User Guide:
+  #     - tutorial/index.md
+  #     - tutorial/first-steps.md
+  #     - tutorial/runnify.md
+  #     - tutorial/soonify.md
+  #     - tutorial/soonify-return.md
+  #     - tutorial/asyncify.md
+  #     - tutorial/syncify.md
+  #     - tutorial/syncify-no-raise.md
+  # - help.md
   - release-notes.md
 markdown_extensions:
   - toc:
@@ -64,17 +64,11 @@ extra:
     property: UA-216293837-1
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/tiangolo/hiya
+      link: https://github.com/Aarif1430
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/tiangolo
+      link: https://twitter.com/MalikAarif1430
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/tiangolo
-    - icon: fontawesome/brands/dev
-      link: https://dev.to/tiangolo
-    - icon: fontawesome/brands/medium
-      link: https://medium.com/@tiangolo
-    - icon: fontawesome/solid/globe
-      link: https://tiangolo.com
+      link: https://www.linkedin.com/in/maarif1430/
 
 extra_css:
   - css/termynal.css
