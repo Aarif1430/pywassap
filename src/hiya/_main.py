@@ -1,7 +1,6 @@
 """
 Unofficial python wrapper for the WhatsApp Cloud API.
 """
-import asyncio
 import logging
 from typing import Any, Dict, Union
 
