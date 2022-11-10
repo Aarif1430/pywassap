@@ -4,6 +4,6 @@ set -e
 set -x
 
 # mypy src
-flake8 src tests docs_src
-black src tests docs_src --check
-isort src tests docs_src scripts --check-only
+flake8 src tests
+black src tests  --check
+isort src tests  scripts --check-only
