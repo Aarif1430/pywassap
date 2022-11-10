@@ -25,13 +25,14 @@ def test_sending_text_message(session_post, whatsapp_mock):
     client = WhatsApp()
     try:
         loop = asyncio.get_event_loop()
+        response = loop.run_until_complete(client.send_text_message(**message))
+
     except RuntimeError as e:
         if str(e).startswith("There is no current event loop in thread"):
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
+            response = loop.run_until_complete(client.send_text_message(**message))
         else:
             raise
-    response = loop.run_until_complete(client.send_text_message(**message))
-
     assert response["contacts"] == [{"input": "447469677603", "wa_id": "447469677603"}]
     assert response["messaging_product"] == "whatsapp"
