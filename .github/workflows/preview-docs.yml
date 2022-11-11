@@ -14,7 +14,7 @@ jobs:
       - name: Download Artifact Docs
         uses: dawidd6/action-download-artifact@v2.9.0
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GIT_TOKEN }}
           workflow: build-docs.yml
           run_id: ${{ github.event.workflow_run.id }}
           name: docs-zip
@@ -37,5 +37,5 @@ jobs:
       - name: Comment Deploy
         uses: ./.github/actions/comment-docs-preview-in-pr
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GIT_TOKEN }}
           deploy_url: "${{ steps.netlify.outputs.deploy-url }}"
