@@ -1,19 +1,15 @@
 # Intro
 
-A simple example of a `FastAPI` wrapper for `WhatsApp` Web API and how to use it.
+A simple example of a whatsapp api wrapper using **aiohttp** for interacting with the whatsapp web client.
 
 ## Installation
 
-```bash
-pip install pywassap
-```
-Run the following command to start the server:
+<div class="termy">
 
-```bash
-uvicorn pywassap:app --reload
+```console
+$ pip install pywassap
+---> 100%
+Successfully installed asyncer anyio
 ```
-Open the following URL in your browser to access the API documentation:
 
-```bash
-localhost:8000/docs
-```
+</div>
