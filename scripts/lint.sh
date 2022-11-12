@@ -4,6 +4,6 @@ set -e
 set -x
 
 # mypy src
-flake8 src tests
-black src tests  --check
-isort src tests  scripts --check-only
+flake8 pywassap tests
+black pywassap tests  --check
+isort spywassaprc tests  scripts --check-only

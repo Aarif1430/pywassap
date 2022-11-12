@@ -1,6 +1,5 @@
 """ Conftest for pytest. """
 import pytest
-
 from pywassap import PyWassap
 
 

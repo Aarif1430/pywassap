@@ -52,7 +52,9 @@ class BasePyWassap:
             async with session.put(self.url, **kwargs) as response:
                 return await response.json()
 
-    async def _delete(self, *args: Any, **kwargs: Dict[str, Any]) -> Dict[str, Any] | Any:
+    async def _delete(
+        self, *args: Any, **kwargs: Dict[str, Any]
+    ) -> Dict[str, Any] | Any:
         """
         Make a DELETE request
         """
