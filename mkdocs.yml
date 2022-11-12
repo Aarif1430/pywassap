@@ -32,6 +32,7 @@ nav:
   - Home: index.md
   - Features - User Guide:
       - sections/index.md
+  - release.md
 markdown_extensions:
   - toc:
       permalink: true
