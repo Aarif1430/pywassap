@@ -1,31 +1,22 @@
 import asyncio
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
-import pytest
-
-from src.hiya import WhatsApp
+from pywassap import PyWassap
 
 
-@pytest.fixture
-def whatsapp_mock():
-    return MagicMock()
-
-
-@patch("src.hiya._main.aiohttp.ClientSession")
-@patch("src.hiya._main.BaseWhatsApp._post")
-def test_sending_text_message(session_post, whatsapp_mock):
+def test_sending_text_message(client: PyWassap) -> None:
     message = {
         "message": "Hello World",
-        "recipient_id": "447469677603",
+        "recipient_id": "1234567890",
         "recipient_type": "individual",
     }
-    session_post.return_value = {
-        "contacts": [{"input": "447469677603", "wa_id": "447469677603"}],
-        "messaging_product": "whatsapp",
-    }
-    client = WhatsApp()
+    with patch("pywassap._main.BasePyWassap._post") as mock_post:
+        mock_post.return_value = {
+            "contacts": [{"input": "123456", "wa_id": "123456789"}],
+            "messaging_product": "whatsapp",
+        }
 
-    response = asyncio.run(client.send_text_message(**message))
+        response = asyncio.run(client.send_text_message(**message))
 
-    assert response["contacts"] == [{"input": "447469677603", "wa_id": "447469677603"}]
-    assert response["messaging_product"] == "whatsapp"
+        assert response["contacts"] == [{"input": "123456", "wa_id": "123456789"}]
+        assert response["messaging_product"] == "whatsapp"

@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "PyWassap"
 version = "0"
-description = "A simple FastAPI wrapper for WhatsApp Web API"
+description = "PyWassap is a python library for sending WhatsApp messages using the WhatsApp Business API."
 authors = ["Aarif Malik <malikarif13@gmail.com>"]
 readme = "README.md"
 homepage = "https://github.com/Aarif1430/pywassap"
@@ -30,7 +30,6 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
-anyio = "^3.4.0"
 aiohttp = "^3.8.3"
 
 [tool.poetry.dev-dependencies]
@@ -55,35 +54,21 @@ build-backend = "poetry.core.masonry.api"
 [tool.coverage.run]
 parallel = true
 source = [
-    "docs_src",
+    "docs",
     "tests",
-    "hiya"
+    "pywassap",
 ]
 context = '${CONTEXT}'
 
-[tool.coverage.report]
-omit = [
-    "docs_src/tutorial/soonify_return/tutorial002.py",
-]
-
 [tool.isort]
 profile = "black"
-known_third_party = ["hiya"]
+known_third_party = ["pywassap"]
 skip_glob = [
-    "hiya/__init__.py",
+    "pywassap/__init__.py",
     ]
 [tool.pytest.ini_options]
 log_cli = false
-filterwarnings = "ignore::DeprecationWarning"
-addopts = "--log-cli-format \"[%(name)s][%(funcName)s] %(message)s\" --verbose --capture=sys"
-pythonpath = [".", "tests"]
 
 [tool.mypy]
 strict = true
-
-[[tool.mypy.overrides]]
-module = "docs_src.*"
-disallow_incomplete_defs = false
-disallow_untyped_defs = false
-disallow_untyped_calls = false
-warn_no_return = false
+implicit_reexport = true

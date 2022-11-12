@@ -22,16 +22,16 @@
 **Source Code**: <a href="https://github.com/Aarif1430/pywassap" target="_blank">https://github.com/Aarif1430/pywassap</a>
 
 ---
-**PyWassap** is a python library for sending WhatsApp messages using the WhatsApp Business API. It is a wrapper around the WhatsApp Business API. The library is built on top of the [FastAPI](https://fastapi.Aarif1.com/) framework and uses [pydantic](https://pydantic-docs.helpmanual.io/) for data validation. It is built with the developer experience in mind. It is a fully asynchronous library and uses [aiohttp](https://docs.aiohttp.org/en/stable/) for making HTTP requests.
+**PyWassap** is a python library for sending WhatsApp messages using the WhatsApp Business API. It is a wrapper around the WhatsApp Business API. The library is built on top of the [aiohttp](https://pypi.org/project/aiohttp/) library for asynchronous HTTP requests.
 
 **PyWassap** supports the following features:
 
 **1. Send WhatsApp messages** - Send WhatsApp messages to a single or multiple recipients.
 
 ```Python
-from pywassap import WhatsApp
+from pywassap import PyWassap
 
-client = WhatsApp()
+client = WhatsApp(number, token)
 client.send_message(
     message="Hello World",
     recipient_id="919999999999"
@@ -39,16 +39,12 @@ client.send_message(
 )
 ```
 
-The entire **PyWassap** library is built on top of the FastApI framework.
-The FastAPI swagger UI is available at `http://localhost:8000/docs` and
-makes it easy to test the API.
-
 **2. Send WhatsApp messages to multiple recipients** - Send WhatsApp messages to multiple recipients.
 
 ```Python
 from pywassap import WhatsApp
 
-client = WhatsApp()
+client = WhatsApp(number, token)
 client.send_message(
     message="Hello World",
     recipient_id=["919999999999", "919999999998"]
@@ -60,9 +56,7 @@ client.send_message(
 ## Requirements
 For development, the following requirements are needed:
 ```console
-fastapi
-uvicorn
-pydantic
+python
 aiohttp
 ```
 

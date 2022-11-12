@@ -2,10 +2,9 @@
 Unofficial python wrapper for the WhatsApp Cloud API.
 """
 import logging
-from typing import Any, Dict, Union
+from typing import Any, Dict
 
 import aiohttp
-import requests
 
 logging.basicConfig(
     level=logging.INFO,
@@ -17,27 +16,27 @@ PHONE_NUMBER = "101150499354696"
 TOKEN = "EAAKV6NqOF3YBAG7MZCAkHYTaqFXiLj6ePlPcmfqbTxiM91sHyQCdilTa44oZBE2dNZClfHlPG35ZAQ3ijA8ZCos5PICg5yCktvqGsX6wJ9ZBsxmg1Y4w9BLMMbeq2pl9bTxvqIPmOCghGBGLhe2BvxDQLBddKpKu56GbMsYr9Ia0IIdPv8HdtU1ZCZCP2YgrSG3Rh8QjW3IDEAZDZD"  # noqa: E501
 
 
-class BaseWhatsApp:
+class BasePyWassap:
     """
     Base class for WhatsApp
     """
 
-    def __init__(self) -> None:
-        self.url = f"{BASE_URL}/{PHONE_NUMBER}/messages"
+    def __init__(self, phone_number: str, token: str) -> None:
+        self.url = f"{BASE_URL}/{phone_number}/messages"
         self.headers = {
             "Content-Type": "application/json",
-            "Authorization": "Bearer {}".format(TOKEN),
+            "Authorization": "Bearer {}".format(token),
         }
-        self._session = aiohttp.ClientSession(headers=self.headers)
 
-    async def _get(self, *args, **kwargs) -> Union[requests.Response, str]:
+    async def _get(self, *args: Any, **kwargs: Any) -> Dict[str, Any] | Any:
         """
         Make a GET request
         """
-        async with self._session.get(self.url, *args, **kwargs) as response:
-            return await response.json()
+        async with aiohttp.ClientSession(headers=self.headers) as session:
+            async with session.get(self.url, **kwargs) as response:
+                return await response.json()
 
-    async def _post(self, *args, **kwargs) -> Dict[str, Any]:
+    async def _post(self, *args: Any, **kwargs: Dict[str, Any]) -> Dict[str, Any] | Any:
         """
         Make a POST request
         """
@@ -45,24 +44,26 @@ class BaseWhatsApp:
             async with session.post(self.url, **kwargs) as response:
                 return await response.json()
 
-    async def _put(self, *args, **kwargs) -> requests.Response:
+    async def _put(self, *args: Any, **kwargs: Dict[str, Any]) -> Dict[str, Any] | Any:
         """
         Make a PUT request
         """
-        async with self._session.put(self.url, *args, **kwargs) as response:
-            return await response.json()
+        async with aiohttp.ClientSession(headers=self.headers) as session:
+            async with session.put(self.url, **kwargs) as response:
+                return await response.json()
 
-    async def _delete(self, *args, **kwargs) -> requests.Response:
+    async def _delete(self, *args: Any, **kwargs: Dict[str, Any]) -> Dict[str, Any] | Any:
         """
         Make a DELETE request
         """
-        async with self._session.delete(self.url, *args, **kwargs) as response:
-            return await response.json()
+        async with aiohttp.ClientSession(headers=self.headers) as session:
+            async with session.delete(self.url, **kwargs) as response:
+                return await response.json()
 
 
-class WhatsApp(BaseWhatsApp):
-    def __init__(self) -> None:
-        super().__init__()
+class PyWassap(BasePyWassap):
+    def __init__(self, phone_number: str, token: str) -> None:
+        super().__init__(phone_number, token)
 
     async def send_text_message(
         self, message: str, recipient_id: str, recipient_type: str = "individual"
