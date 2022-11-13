@@ -32,27 +32,29 @@
 **1. Send WhatsApp messages** - Send WhatsApp messages to a single or multiple recipients.
 
 ```Python
+import asyncio
 from pywassap import PyWassap
 
 client = WhatsApp(number, token)
-client.send_message(
+asyncio.run(client.send_text_message(
     message="Hello World",
     recipient_id="919999999999"
     recipient_type="individual"
-)
+))
 ```
 
 **2. Send WhatsApp messages to multiple recipients** - Send WhatsApp messages to multiple recipients.
 
 ```Python
+import asyncio
 from pywassap import WhatsApp
 
 client = WhatsApp(number, token)
-client.send_message(
+asyncio.run(client.send_text_message(
     message="Hello World",
     recipient_id=["919999999999", "919999999998"]
     recipient_type="individual"
-)
+))
 ```
 
 

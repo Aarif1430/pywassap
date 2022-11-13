@@ -12,8 +12,6 @@ logging.basicConfig(
 )
 
 BASE_URL = "https://graph.facebook.com/v14.0"
-PHONE_NUMBER = "101150499354696"
-TOKEN = "EAAKV6NqOF3YBAG7MZCAkHYTaqFXiLj6ePlPcmfqbTxiM91sHyQCdilTa44oZBE2dNZClfHlPG35ZAQ3ijA8ZCos5PICg5yCktvqGsX6wJ9ZBsxmg1Y4w9BLMMbeq2pl9bTxvqIPmOCghGBGLhe2BvxDQLBddKpKu56GbMsYr9Ia0IIdPv8HdtU1ZCZCP2YgrSG3Rh8QjW3IDEAZDZD"  # noqa: E501
 
 
 class BasePyWassap:
@@ -28,7 +26,7 @@ class BasePyWassap:
             "Authorization": "Bearer {}".format(token),
         }
 
-    async def _get(self, *args: Any, **kwargs: Any) -> Dict[str, Any] | Any:
+    async def _get(self, *args: Any, **kwargs: Any) -> Dict[str, Any]:
         """
         Make a GET request
         """
@@ -36,7 +34,7 @@ class BasePyWassap:
             async with session.get(self.url, **kwargs) as response:
                 return await response.json()
 
-    async def _post(self, *args: Any, **kwargs: Dict[str, Any]) -> Dict[str, Any] | Any:
+    async def _post(self, *args: Any, **kwargs: Dict[str, Any]) -> Dict[str, Any]:
         """
         Make a POST request
         """
@@ -44,7 +42,7 @@ class BasePyWassap:
             async with session.post(self.url, **kwargs) as response:
                 return await response.json()
 
-    async def _put(self, *args: Any, **kwargs: Dict[str, Any]) -> Dict[str, Any] | Any:
+    async def _put(self, *args: Any, **kwargs: Dict[str, Any]) -> Dict[str, Any]:
         """
         Make a PUT request
         """
@@ -52,9 +50,7 @@ class BasePyWassap:
             async with session.put(self.url, **kwargs) as response:
                 return await response.json()
 
-    async def _delete(
-        self, *args: Any, **kwargs: Dict[str, Any]
-    ) -> Dict[str, Any] | Any:
+    async def _delete(self, *args: Any, **kwargs: Dict[str, Any]) -> Dict[str, Any]:
         """
         Make a DELETE request
         """
