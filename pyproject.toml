@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "PyWassap"
-version = "0.0.1"
+version = "0.0.2"
 description = "PyWassap is a python library for sending WhatsApp messages using the WhatsApp Business API."
 authors = ["Aarif Malik <malikarif13@gmail.com>"]
 readme = "README.md"
@@ -19,9 +19,6 @@ classifiers = [
     "Intended Audience :: System Administrators",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Topic :: Internet",
