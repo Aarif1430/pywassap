@@ -47,7 +47,7 @@ asyncio.run(client.send_text_message(
 
 ```Python
 import asyncio
-from pywassap import WhatsApp
+from pywassap import PyWassap
 
 client = WhatsApp(number, token)
 asyncio.run(client.send_text_message(
